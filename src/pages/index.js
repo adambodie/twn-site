@@ -1,21 +1,35 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
+import { makeStyles } from '@material-ui/core/styles'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { Grid } from '@material-ui/core'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  image: {
+    background: '#143296',
+    marginTop: '20px',
+    width: '100%',
+    height: '200px',
+  }
+}));
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export default function IndexPage() {
+    const classes = useStyles()
+    return (
+        <Layout>
+            <SEO title='Home' />
+            <Grid container className={classes.root} spacing={2}>
+                <Grid item xs={12}>
+                  <div className={classes.image}></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit quam et mollis placerat. Aenean ac commodo arcu. Suspendisse sit amet molestie nisi. Praesent eu aliquam mi, ac fermentum lorem. Ut interdum eleifend diam, id porttitor leo rutrum ac. Integer molestie elementum ultrices. Sed sed tempus turpis. Sed finibus orci vitae justo commodo, in egestas mauris sodales. Maecenas tempus sed urna in convallis. Aenean consequat enim augue, ac porttitor lorem tempus ut. Vivamus quis lobortis ipsum. Fusce varius sapien quis enim volutpat finibus. Pellentesque nisi tellus, egestas sed eros et, pulvinar rhoncus turpis. Cras ac ultrices lacus. Nulla bibendum tortor et consectetur faucibus.</p>
+                    <Link to='/page-2/'>Go to page 2</Link>
+                </Grid>
+            </Grid>
+        </Layout>
+    )
+}
 
-export default IndexPage
