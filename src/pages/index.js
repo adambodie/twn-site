@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { makeStyles } from '@material-ui/core/styles'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -26,7 +25,6 @@ export default function IndexPage() {
                 <Grid item xs={12}>
                   <div className={classes.image}></div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean suscipit quam et mollis placerat. Aenean ac commodo arcu. Suspendisse sit amet molestie nisi. Praesent eu aliquam mi, ac fermentum lorem. Ut interdum eleifend diam, id porttitor leo rutrum ac. Integer molestie elementum ultrices. Sed sed tempus turpis. Sed finibus orci vitae justo commodo, in egestas mauris sodales. Maecenas tempus sed urna in convallis. Aenean consequat enim augue, ac porttitor lorem tempus ut. Vivamus quis lobortis ipsum. Fusce varius sapien quis enim volutpat finibus. Pellentesque nisi tellus, egestas sed eros et, pulvinar rhoncus turpis. Cras ac ultrices lacus. Nulla bibendum tortor et consectetur faucibus.</p>
-                    <Link to='/page-2/'>Go to page 2</Link>
                 </Grid>
             </Grid>
         </Layout>

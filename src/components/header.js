@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-//import Image from '../components/image'
+import Image from '../components/image'
+import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: `#143296`
+    background: `#143296`,
+    flexGrow: 1,
   },
   padding: {
     margin: `0 auto`,
@@ -14,20 +16,25 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     margin: 0,
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
   }
 }));
 
-//TODO: Create Header with Logo and Title on same line
 export default function Header({siteTitle}){
     const classes = useStyles() 
     return(
-        <header className={classes.root} >
-            <div className={classes.padding}>
-                {/*<Image />*/}
-                <h1 className={classes.title}>{siteTitle}</h1>
-            </div>
-        </header>
-      )
+        <AppBar position="static" className={classes.root}>
+            <Toolbar>
+                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <Image />
+                </IconButton>
+                <Typography variant="h6" className={classes.title}>{siteTitle}</Typography>
+            </Toolbar>
+        </AppBar>
+    )
 }
 Header.propTypes = {
   siteTitle: PropTypes.string,

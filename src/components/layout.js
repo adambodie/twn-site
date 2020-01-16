@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { CssBaseline, Container } from '@material-ui/core'
 import Header from './header'
+import Bottom from './bottomNavigation'
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -22,6 +23,7 @@ const Layout = ({ children }) => {
                 <main>{children}</main>
             </Container>
             <footer> © Adam Bodie {new Date().getFullYear()}</footer>
+            <Bottom />
         </>
     )
 }
