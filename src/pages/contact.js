@@ -11,6 +11,9 @@ const useStyles = makeStyles(theme => ({
             width: 300,
         },
         minHeight: '500px'
+    },
+    fieldset: {
+        background: 'white'
     }
 }))
 
@@ -22,11 +25,11 @@ export default function Contact() {
             <SEO title='Contact Us' />
             <h1>Contact Us!</h1>
             <form className={classes.root} noValidate autoComplete="off">
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-                <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+                <TextField className={classes.fieldset} id="outlined-basic" label="Outlined" variant="outlined" />
+                <TextField className={classes.fieldset} id="outlined-basic" label="Outlined" variant="outlined" />
+                <TextField className={classes.fieldset} id="outlined-basic" label="Outlined" variant="outlined" />
                 <Button variant="contained" color="primary">Primary</Button>
-            </form>
+            </form> 
         </Layout>
     )
 }

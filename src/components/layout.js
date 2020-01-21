@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { CssBaseline, Container } from '@material-ui/core'
 import Header from './header'
 import Bottom from './bottom'
+import background from '../images/background.jpg'
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
@@ -16,7 +17,7 @@ const Layout = ({ children }) => {
         }
 `)
     return (
-        <>
+        <div style={{'background': `url(${background})`, 'backgroundSize': 'cover', 'color': 'white'}}>
             <CssBaseline />
             <Header siteTitle={data.site.siteMetadata.title} />
             <Container maxWidth='lg'>
@@ -24,7 +25,7 @@ const Layout = ({ children }) => {
             </Container>
             <footer> © Adam Bodie {new Date().getFullYear()}</footer>
             <Bottom />
-        </>
+        </div>
     )
 }
 

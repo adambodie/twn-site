@@ -3,8 +3,6 @@ import renderer from "react-test-renderer"
 import { StaticQuery } from "gatsby"
 import Header from "../header"
 
-
-//TODO: image.js not testing correctly
 beforeEach(() => {
   StaticQuery.mockImplementationOnce(({ render }) =>
     render({
