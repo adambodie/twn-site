@@ -4,26 +4,25 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { Grid, Avatar } from '@material-ui/core'
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  image: {
-    background: '#143296',
-    marginTop: '20px',
-    width: '100%',
-    height: '200px',
-  },
-  staff: {
-    listStyleType: 'none',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  text: {
-    padding: '20px'
-  }
-
-}));
+const useStyles = makeStyles({
+    root: {
+        flexGrow: 1,
+    },
+    image: {
+        background: '#143296',
+        marginTop: '20px',
+        width: '100%',
+        height: '200px',
+    },
+    staff: {
+        listStyleType: 'none',
+        display: 'flex',
+        alignItems: 'center'
+    },
+    text: {
+        padding: '20px'
+    }
+})
 
 
 export default function Staff() {

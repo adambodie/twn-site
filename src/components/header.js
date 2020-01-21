@@ -5,23 +5,23 @@ import Image from '../components/image'
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    background: `#143296`,
-    flexGrow: 1,
-  },
-  padding: {
-    margin: `0 auto`,
-    maxWidth: 960,
-    padding: `1.45rem 1.0875rem`,
-  },
-  title: {
-    margin: 0,
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  }
-}));
+    root: {
+        background: `#143296`,
+        flexGrow: 1,
+    },
+    padding: {
+        margin: `0 auto`,
+        maxWidth: 960,
+        padding: `1.45rem 1.0875rem`,
+    },
+    title: {
+        margin: 0,
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    }
+}))
 
 export default function Header({siteTitle}){
     const classes = useStyles() 
@@ -37,9 +37,9 @@ export default function Header({siteTitle}){
     )
 }
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+    siteTitle: ``,
 }

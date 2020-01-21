@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import { CssBaseline, Container } from '@material-ui/core'
 import Header from './header'
-import Bottom from './bottomNavigation'
+import Bottom from './bottom'
 
 const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
