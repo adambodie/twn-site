@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
         }
 `)
     return (
-        <div style={{'background': `url(${background})`, 'backgroundSize': 'cover', 'color': 'white'}}>
+        <div style={{'background': `url(${background})`, 'backgroundSize': 'cover', 'color': 'white', 'minHeight': window.innerHeight}}>
             <CssBaseline />
             <Header siteTitle={data.site.siteMetadata.title} />
             <Container maxWidth='lg'>
