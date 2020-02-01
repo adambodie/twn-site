@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import HomeIcon from '@material-ui/icons/Home'
 import InfoIcon from '@material-ui/icons/Info'
 import ContactSupportIcon from '@material-ui/icons/ContactSupport'
+import DescriptionIcon from '@material-ui/icons/Description'
 import PeopleIcon from '@material-ui/icons/People'
 import { Link } from 'gatsby'
 
@@ -29,6 +30,7 @@ export default function Bottom() {
                 <BottomNavigationAction label="About" icon={<Link to='/about/'><InfoIcon className={classes.link}/></Link>} />
                 <BottomNavigationAction label="Questions" icon={<Link to='/contact/'><ContactSupportIcon className={classes.link}/></Link>} />
                 <BottomNavigationAction label="Staff" icon={<Link to='/staff/'><PeopleIcon className={classes.link}/></Link>} />
+                <BottomNavigationAction label="Products" icon={<Link to='/products/'><DescriptionIcon className={classes.link}/></Link>} />
             </BottomNavigation>
         </Hidden>
     )

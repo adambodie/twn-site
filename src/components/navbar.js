@@ -31,6 +31,7 @@ export default function Navbar({siteTitle}){
             <Link to='/about' className={classes.link}>About</Link>
             <Link to='/contact' className={classes.link}>Contact</Link>
             <Link to='/staff' className={classes.link}>Staff</Link>
+            <Link to='/products' className={classes.link}>Products</Link>
         </Breadcrumbs>
     )
 }
